@@ -1,26 +1,204 @@
 @import "tailwindcss";
+@import "lenis/dist/lenis.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
+/* ============================================
+   THEME — Design tokens for Kimberly Portfolio
+   ============================================ */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-bg: #050505;
+  --color-text: #f3f4f6;
+  --color-accent: #B026FF;
+  --color-accent-green: #BFFF00;
+  --color-accent-pink: #FF1493;
+  --color-muted: #888888;
+  --color-card-dark: #1a1a1a;
+  --color-card-light: #ffffff;
+
+  --font-heading: var(--font-anton);
+  --font-body: var(--font-inter);
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ============================================
+   BASE RESETS
+   ============================================ */
+*, *::before, *::after {
+  cursor: none !important;
+}
+
+html {
+  background-color: #050505;
+  color: #f3f4f6;
+  position: relative;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #050505;
+  color: #f3f4f6;
+  font-family: var(--font-body), system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Hide scrollbar but keep functionality */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}
+
+html, body {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+::selection {
+  background-color: #B026FF;
+  color: #050505;
+}
+
+/* ============================================
+   CUSTOM CURSOR STYLES
+   ============================================ */
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  background: #f3f4f6;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99999;
+  mix-blend-mode: difference;
+  transition: width 0.3s var(--ease-out-expo),
+              height 0.3s var(--ease-out-expo),
+              margin 0.3s var(--ease-out-expo);
+  will-change: transform;
+}
+
+.custom-cursor.expanded {
+  width: 64px;
+  height: 64px;
+  margin-left: -26px;
+  margin-top: -26px;
+}
+
+.custom-cursor-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #050505;
+  opacity: 0;
+  transition: opacity 0.3s var(--ease-out-expo);
+}
+
+.custom-cursor.expanded .custom-cursor-text {
+  opacity: 1;
+}
+
+/* ============================================
+   TEXT OUTLINE EFFECT (for UN-BORING)
+   ============================================ */
+.text-outline {
+  -webkit-text-stroke: 2px #f3f4f6;
+  color: transparent;
+  transition: color 0.4s var(--ease-out-expo),
+              -webkit-text-stroke-color 0.4s var(--ease-out-expo);
+}
+
+.text-outline:hover {
+  color: #B026FF;
+  -webkit-text-stroke-color: #B026FF;
+}
+
+@media (min-width: 768px) {
+  .text-outline {
+    -webkit-text-stroke-width: 3px;
+  }
+}
+
+/* ============================================
+   KEYFRAMES
+   ============================================ */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes float-orb {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.3;
+  }
+  33% {
+    transform: translate(-40%, -60%) scale(1.2);
+    opacity: 0.4;
+  }
+  66% {
+    transform: translate(-60%, -40%) scale(0.9);
+    opacity: 0.25;
+  }
+}
+
+@keyframes float-orb-2 {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.2;
+  }
+  50% {
+    transform: translate(-60%, -40%) scale(1.3);
+    opacity: 0.35;
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Animation utility classes */
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
+
+.animate-float-orb {
+  animation: float-orb 15s ease-in-out infinite;
+}
+
+.animate-float-orb-2 {
+  animation: float-orb-2 20s ease-in-out infinite;
+}
+
+.animate-pulse-ring {
+  animation: pulse-ring 2s ease-out infinite;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 30s linear infinite;
 }
