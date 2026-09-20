@@ -27,7 +27,7 @@ const services = [
   },
   {
     title: "Digital Outreach",
-    description: "Developing strategies that amplify visibility.",
+    description: "Turning your vision into a brand people understand and remember.",
     bg: "bg-accent-pink",
     text: "text-text",
     accent: "text-text/60",

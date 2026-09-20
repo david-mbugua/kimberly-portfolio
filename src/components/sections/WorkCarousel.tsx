@@ -73,6 +73,14 @@ const featuredProjects = [
 
 const archiveLinks = [
   {
+    label: "Ruach West Social Media Manager",
+    href: "https://www.instagram.com/ruachwest?stkn=Z3NlcTBlM2I2aGY0"
+  },
+  {
+    label: "Biolinx Africa LinkedIn",
+    href: "https://www.linkedin.com/posts/robertkaranja_cancerresearch-innovation-activity-7353054478188634112-ljZm",
+  },
+  {
     label: "Forever Fragrance TikTok 01",
     href: "https://vm.tiktok.com/ZMAFg29q6/",
   },
@@ -88,14 +96,7 @@ const archiveLinks = [
     label: "Kimmy's Treats TikTok 02",
     href: "https://vm.tiktok.com/ZMAcjMVoe/",
   },
-  {
-    label: "Biolinx Africa LinkedIn",
-    href: "https://www.linkedin.com/posts/robertkaranja_cancerresearch-innovation-activity-7353054478188634112-ljZm",
-  },
-  {
-    label: "AIESEC Proposal",
-    href: "https://www.canva.com/design/DAGQFmtr6ZE/u5hiYOyFEPHUTgK_fNnxag/edit",
-  },
+  
 ];
 
 export function WorkCarousel() {
