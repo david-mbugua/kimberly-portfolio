@@ -7,17 +7,17 @@ import { CirclePlay, ExternalLink, Film, ImageIcon } from "lucide-react";
 
 const featuredProjects = [
   {
-    title: "Rhema Fest Recap",
+    title: "Rhema Feast Worship Moments",
     category: "Event Storytelling",
     platform: "Google Drive",
     description:
-      "A high-energy vertical recap capturing the voices, colour, and live stage moments of Rhema Fest.",
+      "A worship-focused recap of Rhema Feast, a Kenyan Christian gathering, highlighting the energy and emotion of the event.",
     href: "https://drive.google.com/file/d/1yOazORcWD7A1lInmqbxgWzdam0bisC_J/view?usp=share_link",
     image: "/projects/rhema-fest.jpg",
     stats: ["Event recap", "Vertical reel"],
   },
   {
-    title: "Fireworks & Flag",
+    title: "Best Moments of Rhema Feast 2026",
     category: "Cultural Storytelling",
     platform: "Google Drive",
     description:
