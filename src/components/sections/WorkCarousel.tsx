@@ -7,6 +7,36 @@ import { CirclePlay, ExternalLink, Film, ImageIcon } from "lucide-react";
 
 const featuredProjects = [
   {
+    title: "Rhema Fest Recap",
+    category: "Event Storytelling",
+    platform: "Google Drive",
+    description:
+      "A high-energy vertical recap capturing the voices, colour, and live stage moments of Rhema Fest.",
+    href: "https://drive.google.com/file/d/1yOazORcWD7A1lInmqbxgWzdam0bisC_J/view?usp=share_link",
+    image: "/projects/rhema-fest.jpg",
+    stats: ["Event recap", "Vertical reel"],
+  },
+  {
+    title: "Fireworks & Flag",
+    category: "Cultural Storytelling",
+    platform: "Google Drive",
+    description:
+      "Night-time celebration cut with fireworks, skyline reflections, and a Kenyan flag at the centre of the frame.",
+    href: "https://drive.google.com/file/d/1ZtYpWFiAytH8RSax5mFY0vOcQs7z_y46/view?usp=share_link",
+    image: "/projects/fireworks-flag.jpg",
+    stats: ["Event moment", "Social-first edit"],
+  },
+  {
+    title: "Emotional Maturity — Part 1",
+    category: "Interview Reel",
+    platform: "Google Drive",
+    description:
+      "A conversational reel opening up emotional maturity and the relationships that shape how we connect.",
+    href: "https://drive.google.com/file/d/1Tw0_D4ouK35pX_spwx197V-65qcoymoX/view?usp=share_link",
+    image: "/projects/emotional-maturity.jpg",
+    stats: ["Interview series", "Part 1"],
+  },
+  {
     title: "Summit Overview",
     category: "Event Storytelling",
     platform: "Google Drive",
